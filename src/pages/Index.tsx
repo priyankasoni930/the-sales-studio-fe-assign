@@ -251,34 +251,7 @@ const Index = () => {
                 </div>
               </div>
             )}
-          </motion.div>
-
-          <section className="mt-16 p-6 bg-accent rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">How It Works</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="bg-primary text-primary-foreground w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  1
-                </div>
-                <h3 className="font-semibold mb-2">Visit Daily</h3>
-                <p>Check our site daily for new coupon opportunities</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-primary text-primary-foreground w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  2
-                </div>
-                <h3 className="font-semibold mb-2">Claim Your Gift</h3>
-                <p>Click to claim your special discount coupon</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-primary text-primary-foreground w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  3
-                </div>
-                <h3 className="font-semibold mb-2">Enjoy Savings</h3>
-                <p>Use your coupon code at checkout for discounts!</p>
-              </div>
-            </div>
-          </section>
+          </motion.div>        
         </div>
       </main>
 
