@@ -1,0 +1,123 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 222 47% 11%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    --primary: 160 84% 39%;
+    --primary-foreground: 355.7 100% 97.3%;
+    
+    --secondary: 182 94% 40%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    
+    --accent: 176 62% 95%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 160 84% 39%;
+    
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+    
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 160 84% 39%;
+    --primary-foreground: 355.7 100% 97.3%;
+    
+    --secondary: 182 94% 25%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 160 84% 39%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Coupon card animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.coupon-card {
+  @apply transition-all duration-300 hover:shadow-xl dark:hover:shadow-lg dark:hover:shadow-primary/20;
+}
+
+.coupon-card:hover {
+  transform: translateY(-5px);
+}
+
+.page-transition {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark theme specific styles */
+.dark .coupon-card {
+  @apply bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-primary/20;
+}
+
+.dark .gradient-text {
+  @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+}
+
